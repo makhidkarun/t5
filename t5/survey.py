@@ -3,7 +3,6 @@
 #   http://travellermap.com/SEC.aspx?sector=Spinward%20Marches
 
 def parse_sector(text_stream):
-    pass
     for line in text_stream:
         if line.startswith('#'):
             pass
