@@ -28,3 +28,9 @@ t5/trade
  - classes to describe tradegoods
  - functions to genearte random tradegoods per TC
  - functions to determine base cost, base price, and ranging in on actual value
+
+webapp setup:
+
+* virtualenv .venv --distribute
+* source .venv/bin/activate
+* pip install Flask gunicorn
