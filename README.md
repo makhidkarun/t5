@@ -1,4 +1,5 @@
 T5
+--
 
 python libraries for parsing and working with traveller5
 
@@ -27,3 +28,20 @@ t5/trade
  - classes to describe tradegoods
  - functions to genearte random tradegoods per TC
  - functions to determine base cost, base price, and ranging in on actual value
+
+webapp setup:
+
+* virtualenv .venv --distribute
+* source .venv/bin/activate
+* pip install Flask gunicorn
+* foreman start # to test
+
+Heroku setup:
+
+* heroku login
+* heroku create
+* git push heroku master
+* heroku ps:scale web=1
+* heroku ps # to check it running
+* heroku logs # checking on logs
+* heroku run python # interactive shell
