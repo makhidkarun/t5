@@ -1,5 +1,7 @@
 import re
 
+HEXCODE_REGEX = (r'^(\d\d)(\d\d)$')
+
 WORLD_REGEX = (r'^([0-9A-HYX])'  # starport
                '([0-9A-F])'      # size
                '([0-9A-F])'      # atmo
