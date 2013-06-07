@@ -90,7 +90,36 @@ LAW_DETAIL = {'0': 'No Law. No prohibitions.',
               'J': 'Extreme Law. Routinely oppressive and restrictive.'}
 
 
+class SolarSystem(object):
+    """Represents a solarsystem from T5 - basic version is just the information
+    parsed or generated to sufficiently fill out T5's second survey format.
+    Extended data may include orbits and non-mainworld details within the
+    system."""
+
+    @classmethod
+    def generate():
+        pass
+
+    # .sector
+    # .name
+    # .hex_x,hex_y
+    # world
+    # .bases
+    # .tradecodes[]
+    # .zone
+    # .pbg
+    # .allegiance
+    # .stellar
+    # .importance
+    # .economic
+    # .cultural
+    # .nobles
+    # .numworlds
+    # .ru
+
 class World(object):
+    """Represents an individual work within a system. Tracked explicitly
+    by UWP as a str() output."""
 
     @classmethod
     def generate():
@@ -114,9 +143,22 @@ class World(object):
         else:
             raise ValueError('Unable to parse UWP: %s' % uwp)
 
+    def __repr__(self):
+        return "{0}{1}{2}{3}{4}{5}{6}-{7}".format(
+            self.starport,
+            self.size,
+            self.atmosphere,
+            self.hydrographics,
+            self.population,
+            self.government,
+            self.lawlevel,
+            self.techlevel)
+
     def _generate_trade_classifications(self):
         self.tc = []
 
+    # TODO(heckj): ok, neat idea - useless in practice for reading in T5
+    # second survey data and reacting to these codes...
     # properties to validate trade classifications. All codes are expected to
     # be in 'upper case' and string values
 
