@@ -1,0 +1,8 @@
+<!doctype html>
+<title>Example template rendering</title>
+<script src="{{ d3url }}" charset="utf-8"></script>
+{% if name %}
+<h1>Hello {{ name }}</h1>
+{% else %}
+<h1>Hello Traveller</h1>
+{% endif %}
