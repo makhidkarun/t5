@@ -45,3 +45,7 @@ Heroku setup:
 * heroku ps # to check it running
 * heroku logs # checking on logs
 * heroku run python # interactive shell
+
+hex grid notes for d3:
+* https://github.com/d3/d3-plugins/tree/master/hexbin
+* http://stackoverflow.com/questions/14600705/hex-grid-with-d3-js
