@@ -31,7 +31,7 @@ t5/trade
 
 webapp setup:
 
-* virtualenv .venv --distribute
+* python3 -m venv .venv
 * source .venv/bin/activate
 * pip install Flask gunicorn
 * foreman start # to test
