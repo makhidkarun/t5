@@ -31,20 +31,11 @@ t5/trade
 
 webapp setup:
 
-* python3 -m venv .venv
-* source .venv/bin/activate
-* pip install Flask gunicorn
-* foreman start # to test
-
-Heroku setup:
-
-* heroku login
-* heroku create
-* git push heroku master
-* heroku ps:scale web=1
-* heroku ps # to check it running
-* heroku logs # checking on logs
-* heroku run python # interactive shell
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install Flask gunicorn
+```
 
 hex grid notes for d3:
 * https://github.com/d3/d3-plugins/tree/master/hexbin
